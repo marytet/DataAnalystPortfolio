@@ -60,19 +60,6 @@ correlation matrix, logistic regression, random forest, model's metrics,
 confusion matrix, users clusters, train model to predict user churn.
 ### Technologies and libraries:
 Python, Pandas, Numpy, Sklearn, Scipy, Plotly, Matplotlib, Seaborn.
-### Conclusions and basic recommendations:
-Based on the research above, I have developed some suggestions and
-recommendations.
-![img](customer_churn_prediction_and_retention/gym_distribution.png)
-![img](customer_churn_prediction_and_retention/gym_corr.png)
-![img](customer_churn_prediction_and_retention/gym_conf_matrix.png)
-![img](customer_churn_prediction_and_retention/gym_clusters.png)
-<ul>  
-    <li>First of all, I want to note the large churn of clients with contracts for one month and who leave the gym and no longer return after a few sessions.  there is a need to create an interest in continuing to use the gym services and motivational policies in order for them to renew their contracts.  for this purpose, I propose to create user cards with the possibility of accumulating points and subsequently exchanging these points for rewards.  for example, additional services of the gym (cafe, swimming pool, etc.), free classes or master classes.</li>
-    <li>My next suggestion is to offer promotions and discounts for those who renew the contract.  As we noticed in our research, we have the lowest customer churn for that group of customers who signed a contract for a year, therefore, we need to strive to ensure that users switch from short-term to long-term contracts</li>
-    <li>Creating a feedback system for improving gym services and eliminate deficiences, especially feedback from users who decide to leave the gym. We need to ask them their reasons for leaving, suggestions they have and what we can do to get them to stay.</li>
-    <li>Membership freeze. This option will help us to return customers who temporarily can not to visit the gym, but which are planning to return in the feature. In this way we will become more customer-oriented, and it will give us an advantage over other gyms.</li>
-</ul>
 
 ## Project 7. A/A/B Test to Inform Business Decisions
 
