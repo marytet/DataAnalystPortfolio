@@ -7,7 +7,9 @@
 Based on analytic data on customers profiles and interactions collected by the gym chain Model Fitness, to analyze customer profiles and, on their basis, think over a customer retention strategy. Additional tasks of this project are drawing up a typical user profile, analyzing the factors affecting churn, and making recommendations for customer service.
 
 ### 1. Exploratory data analysis
+
 ####Clean data and drawing first conclusions. Data divided into two groups: churn and stay, and plotted feature distributions.
+
 ![img](churn_distribution.png)
 According to the graphs above we can draw some interesting conclusions:
 <ul>
@@ -20,18 +22,24 @@ According to the graphs above we can draw some interesting conclusions:
 </ul>
 
 #### Correlation matrix
+
 ![img](gym_corr.png)
+
 The correlation matrix above shows a strong dependency between two features: Average class frequency total and Average class frequency current month, the features have a correlation of about 0.95 which indicates presence of multicollinearity between the two variables. We can drop Average class frequency current month.
 
 ### 2. Choosing model
+
 The main task of this step of our project is to build an optimal model 
 to predict user churn. I will train the model on the train set with 
 two methods: logistic regression and random forest. Lastly, I'll evaluate 
 accuracy, precision, and recall for both models using the validation data. 
 Based on the calculated metrics and on the plotted confusion matrices for 
 each of the models, I'll choose tho most accurate model.
+
 ![img](matrix_lr.png)
+
 ![img](gym_conf_matrix.png)
+
 Our Random forest model performed a little better than the logistic 
 regression by catching 92% of the true cases (91% using the 
 logistic regression) in the unseen/validation set and had an ROC_AUC 
@@ -41,11 +49,15 @@ or less the same, It's a good idea to go with the simpler and more
 interpretable model that is the logistic regression for the choice of model.
 
 ### 3. Create user clusters
+
 I use Hierarchical clustering to get the optimal number of clusters to predict user churn.
+
 ![img](gym_clusters.png)
+
 The suggested optimal number of clusters corresponds to the five different colors on the plot.
 
 #### Predict customer clusters and feature distribution
+
 ![img](distr_clusters.png)
 
 ### Main conclusion
