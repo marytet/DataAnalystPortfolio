@@ -8,7 +8,7 @@ Based on analytic data on customers profiles and interactions collected by the g
 
 ### 1. Exploratory data analysis
 
-####Clean data and drawing first conclusions. Data divided into two groups: churn and stay, and plotted feature distributions.
+#### Clean data and drawing first conclusions. Data divided into two groups: churn and stay, and plotted feature distributions.
 
 ![img](churn_distribution.png)
 According to the graphs above we can draw some interesting conclusions:
