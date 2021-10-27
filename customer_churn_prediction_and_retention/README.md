@@ -60,10 +60,40 @@ The suggested optimal number of clusters corresponds to the five different color
 
 ![img](distr_clusters.png)
 
+<table>
+    <caption>Churn rate for each cluster</caption>
+    <tr>
+        <th>Cluster</th>
+        <th>Churn rate</th>
+    </tr>
+    <tr>
+        <th>0</th>
+        <th>0.267</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <th>0.359</th>
+    </tr>
+    <tr>
+        <th>2</th>
+        <th>0.247</th>
+    </tr>
+    <tr>
+        <th>3</th>
+        <th>0.429</th>
+    </tr>
+    <tr>
+        <th>4</th>
+        <th>0.020</th>
+    </tr>
+</table>
+
+The table above shows the churn rate for each cluster. We see the lowest churn rates among customers who are in clusters 0 and 3.
+
 ### Main conclusion
 
-Based on the above research, I have developed some suggestions and recommendations.
-<ul>  
+Based on the research, I have developed some suggestions and recommendations.
+<ul>
     <li>First of all, I want to note the large churn of clients with contracts for one month and who leave the gym and no longer return after a few sessions.  there is a need to create an interest in continuing to use the gym services and motivational policies in order for them to renew their contracts.  for this purpose, I propose to create user cards with the possibility of accumulating points and subsequently exchanging these points for rewards.  for example, additional services of the gym (cafe, swimming pool, etc.), free classes or master classes.</li>
     <li>My next suggestion is to offer promotions and discounts for those who renew the contract.  As we noticed in our research, we have the lowest customer churn for that group of customers who signed a contract for a year, therefore, we need to strive to ensure that users switch from short-term to long-term contracts</li>
     <li>Creating a feedback system for improving gym services and eliminate deficiences, especially feedback from users who decide to leave the gym. We need to ask them their reasons for leaving, suggestions they have and what we can do to get them to stay.</li>
