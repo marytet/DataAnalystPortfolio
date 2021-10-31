@@ -109,9 +109,11 @@ colors on the plot.
 The table above shows the churn rate for each cluster. We see the lowest 
 churn rates among customers who are in clusters 4 and 2.
 
-![img](gains_curve.png)
 
-According to the Cumulative Gaines Curve, if we approach 20% of our customer base (x-axis), we will get about 75% of all the positive answers (y-axis). With the top 30% of our customer base we can find a whooping percentage of 90% of all positive answers and so on so forth. It means, our model works clearly.
+To measure model performance I'll use Cumulative gains chart.
+![img](cum_gains_curve.png)
+
+Based on the graph above we can conclude, the curve for the developed Logistic regression model suggests a better performance than for the random model. According to the Cumulative Gaines Curve, if we approach 20% of our customer base (x-axis), we will get about 75% of all the positive answers (y-axis). With the top 30% of our customer base we can find a whooping percentage of 90% of all positive answers and so on so forth.
 
 ### Main conclusion
 
