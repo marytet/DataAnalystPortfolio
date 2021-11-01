@@ -39,16 +39,11 @@ accuracy, precision, and recall for both models using the validation data.
 Based on the calculated metrics and on the plotted confusion matrices for 
 each of the models, I'll choose tho most accurate model.
 
-After predicting models I build error matrices, that allows visualization of 
-the performance of algorithms.
+After predicting models I built Receiver Operating Characteristic Curve for two candidate models, to compare their performances. AUC, as the name suggests, is the covered area under the respective curve, higher values indicating a better model that is able to distinguish between the two classes.
 
-![img](matrix_lr.png)
+![img](roc_curve.png)
 
-Out of 602 non churn customers in the validation data, the model correctly predicted 558 of them (True positive), and wrongly predicted 44 of them (False negative or Type II error). Out of the 198 churn customers in the validation data, the model correctly predicted 152 (True negative), and wrongly predicted 46 of them (False positive or Type I error).
-
-![img](gym_conf_matrix.png)
-
-Out of 602 non churn customers in the validation data, the model correctly predicted 565 of them (True positive), 7 customers more then logistic regression model, and wrongly predicted 44 of them (False negative or Type II error), 7 customers less then logistic regression model. Out of the 198 churn customers in the validation data, the model correctly predicted 150 (True negative), and wrongly predicted 48 of them (False positive or Type I error).
+Our two models perform particularly well, at 0.95 and 0.94. Model Logistic regression is obviously better than model Random Forrest. We can see that visually: at given threshold, model Logistic Regression presents better metrics than model Random Forrest and thus its curve is higher.
 
 #### Conclusion
 
@@ -77,6 +72,16 @@ colors on the plot.
 #### Predict customer clusters and feature distribution
 
 ![img](distr_clusters.png)
+
+Graphs above show the cluster distribution for each relevant continuous feature with clusters segregation.
+Let's take a closer look at each graph.
+<ul>
+<li>Cluster distribution by Age:
+on clusters 0, 2 and 3 the peak is on the range 28-30 years, for cluster 1 we see offset to the left side and for cluster 4 - to the right side.</li>
+<li>Cluster distribution by Average additional charges total: clusters 0,1,2,3 are in the range 50-150 units, on this graph we can highlight cluster 4 with two peaks in the distribution: on the range 50-100 and 150-220. It means in cluster 4 we have clients who prefere to get additional services in the gym.</li>
+<li>Cluster distribution by Lifetime: the peak of each cluster on the 2 lifetime, only cluster 4 is on the 3-4 lifetime.</li>
+<li>Cluster distribution by Average class frequency total: visit frequency for clusters 0 and 3 is 1-2 times a week, for clusters 0 and 2 frequency 2 times a week, and for cluster 4 the frequency between 2 and 3 times a week.</li>
+</ul>  
 
 <table>
     <caption>Churn rate for each cluster:</caption>
