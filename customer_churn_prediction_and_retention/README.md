@@ -12,6 +12,14 @@ on their basis, develop a customer retention strategy. Additional tasks of this 
 
 #### Clean data and drawing first conclusions. Data divided into two groups: churn and stay, and plotted feature distributions.
 
+new list:
+***
+    1. get 1
+    *get 2
+
+br<br/>
+br
+
 ![img](churn_distribution.png)
 According to the graphs above we can draw some interesting conclusions:
 <ul>
@@ -22,15 +30,15 @@ According to the graphs above we can draw some interesting conclusions:
 the number of remaining users, the indicator varies from 1 to 3 visits per week, there is also a large number of users visiting th gym 4 times a week, while the churn peak occurs at 1 to 2 visits per week.
     <li>More people without partners churned than people with partners. Same for people with group visits</li>
     <li>The highest churn is accounted for users with contract period of one month and very low churn rate for users with contract of 12 months.</li>
-</ul>
+</ul><br/>
 
-#### Correlation matrix
+#### Correlation matrix<br/>
 
-![img](gym_corr.png)
+![img](gym_corr.png)<br/>
 
 The correlation matrix above shows a strong dependency between two features: Average class frequency total and Average class frequency current month, the features have a correlation of about 0.95 which indicates presence of multicollinearity between the two variables. We can drop Average class frequency current month.
-
-### 2. Choosing model
+<br/>
+### 2. Choosing model<br/>
 
 The main task of this step of our project is to build an optimal model 
 to predict user churn. I will train the model on the train set with 
@@ -38,7 +46,7 @@ two methods: logistic regression and random forest. Lastly, I'll evaluate
 accuracy, precision, and recall for both models using the validation data. 
 Based on the calculated metrics and on the plotted confusion matrices for 
 each of the models, I'll choose tho most accurate model.
-
+<br/>
 After predicting models I built Receiver Operating Characteristic Curve for two candidate models, to compare their performances. AUC, as the name suggests, is the covered area under the respective curve, higher values indicating a better model that is able to distinguish between the two classes.
 
 ![img](roc_curve.png)
@@ -146,3 +154,5 @@ who temporarily can not to visit the gym, but which are planning to return
 in the feature. In this way we will become more customer-oriented, 
 and it will give us an advantage over other gyms.</li>
 </ul>
+
+
