@@ -42,7 +42,7 @@ LINK: [project](car_sales)
 
 ## Project 2. A/B testing international online store
 
-LINK: [project](ab_test_online_store)
+LINK: [project](ab_test_e-commerce_website)
 
 ## Project 3. A/B Test to Inform Business Decisions
 
@@ -50,7 +50,7 @@ LINK: [project](ab_test_prioritize_hypotheses)
 
 ## Project 4. Business metrics of Yandex.Afisha
 
-LINK: [project](business_metrics_yandex_afisha)
+LINK: [project](business_metrics_ecommerce_website)
 
 
 ## Project 7. A/A/B Test to Inform Business Decisions
