@@ -22,19 +22,20 @@ br
 
 ![img](churn_distribution.png)
 According to the graphs above we can draw some interesting conclusions:
-<ul>
-    <li>Age distribution: the peak of churn customers 25-27 years, the peak of staying customers 30-32 years.</li>
-    <li>Month to end contract distribution: peak of churn 6 months, the peak of stay customers 1-2 months.</li>
-    <li>Lifetime distribution: we can see a significant peak in the churn of visitors at 0 and 1 lifetime.</li>
-    <li>Average frequency total distribution: there is no pronounced peak in 
-the number of remaining users, the indicator varies from 1 to 3 visits per week, there is also a large number of users visiting th gym 4 times a week, while the churn peak occurs at 1 to 2 visits per week.
-    <li>More people without partners churned than people with partners. Same for people with group visits</li>
-    <li>The highest churn is accounted for users with contract period of one month and very low churn rate for users with contract of 12 months.</li>
-</ul><br/>
 
-#### Correlation matrix<br/>
+    - Age distribution: the peak of churn customers 25-27 years, the peak of staying customers 30-32 years.</li>
+    - Month to end contract distribution: peak of churn 6 months, the peak of stay customers 1-2 months.</li>
+    - Lifetime distribution: we can see a significant peak in the churn of visitors at 0 and 1 lifetime.</li>
+    - Average frequency total distribution: there is no pronounced peak in the number of remaining users, the indicator varies from 1 to 3 visits per week, there is also a large number of users visiting th gym 4 times a week, while the churn peak occurs at 1 to 2 visits per week.
+    - More people without partners churned than people with partners. Same for people with group visits</li>
+    - The highest churn is accounted for users with contract period of one month and very low churn rate for users with contract of 12 months.</li>
+<br/>
 
-![img](gym_corr.png)<br/>
+#### Correlation matrix
+<br/>
+
+![img](gym_corr.png)
+<br/>
 
 The correlation matrix above shows a strong dependency between two features: Average class frequency total and Average class frequency current month, the features have a correlation of about 0.95 which indicates presence of multicollinearity between the two variables. We can drop Average class frequency current month.
 <br/>
