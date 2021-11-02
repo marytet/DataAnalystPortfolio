@@ -13,7 +13,7 @@ on their basis, develop a customer retention strategy. Additional tasks of this 
 #### Clean data and drawing first conclusions. Data divided into two groups: churn and stay, and plotted feature distributions.
 <br/>
 
-![img](churn_distribution.png)
+![img](graphs/churn_distribution.png)
 According to the graphs above we can draw some interesting conclusions:
 
 - Age distribution: the peak of churn customers 25-27 years, the peak of staying customers 30-32 years.<br/>
@@ -26,7 +26,7 @@ According to the graphs above we can draw some interesting conclusions:
 #### Correlation matrix
 <br/>
 
-![img](gym_corr.png)
+![img](graphs/gym_corr.png)
 <br/>
 
 The correlation matrix above shows a strong dependency between two features: Average class frequency total and Average class frequency current month, the features have a correlation of about 0.95 which indicates presence of multicollinearity between the two variables. We can drop Average class frequency current month.
@@ -43,7 +43,7 @@ each of the models, I'll choose tho most accurate model.
 After predicting models I built Receiver Operating Characteristic Curve for two candidate models, to compare their performances. AUC, as the name suggests, is the covered area under the respective curve, higher values indicating a better model that is able to distinguish between the two classes.
 <br/>
 
-![img](roc_curve.png)
+![img](graphs/roc_curve.png)
 
 <br/>
 Our two models perform particularly well, at 0.95 and 0.94. Model Logistic regression is obviously better than model Random Forrest. We can see that visually: at given threshold, model Logistic Regression presents better metrics than model Random Forrest and thus its curve is higher.
@@ -66,7 +66,7 @@ I use Hierarchical clustering to get the optimal number of clusters to
 predict user churn.
 <br/>
 
-![img](gym_clusters.png)
+![img](graphs/gym_clusters.png)
 
 <br/>
 The suggested optimal number of clusters corresponds to the five different 
@@ -77,7 +77,7 @@ colors on the plot.
 
 <br/>
 
-![img](distr_clusters.png)
+![img](graphs/distr_clusters.png)
 
 <br/>
 Graphs above show the cluster distribution for each relevant continuous feature with clusters segregation.
@@ -122,7 +122,7 @@ churn rates among customers who are in clusters 4 and 2.
 
 To measure model performance I'll use Cumulative gains chart.
 
-![img](cum_gains_curve.png)
+![img](graphs/cum_gains_curve.png)
 
 Based on the graph above we can conclude, the curve for the developed Logistic regression model suggests a better performance than for the random model. According to the Cumulative Gaines Curve, if we approach 20% of our customer base (x-axis), we will get about 75% of all the positive answers (y-axis). With the top 30% of our customer base we can find a whooping percentage of 90% of all positive answers and so on so forth.
 
