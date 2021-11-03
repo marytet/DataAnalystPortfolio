@@ -9,6 +9,8 @@ I need to identify patterns that determine whether a game succeeds or not.
 This will allow me to spot potential big winners and plan advertising campaigns; 
 imagine that it’s December 2016, and I'm planning a campaign for 2017.
 
+Full [project](video_games_sales)
+
 Data description
 
 * Name

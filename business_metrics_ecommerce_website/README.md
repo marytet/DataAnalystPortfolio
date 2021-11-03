@@ -8,6 +8,8 @@ find out about events like movie showings, exhibitions, gigs, etc. and buy
 tickets. My goal is to help marketing experts from Yandex.Afisha make 
 effective investments in marketing, i.e. optimize marketing expenses.
 
+Full [project](business_metrics_ecommerce_website)
+
 Description of the data
 
 The visits table (server logs with data on website visits):
