@@ -70,9 +70,9 @@ Each video has a specific category (Entertainment, Music, News & Politics, etc.)
 A video can be in the trending section for several days in a row.
 
 The goal of the project is to develop a dashboard to automatically answer to the next questions:
-* What video categories were trending last week?
-* How were they distributed among various regions?
-* What categories were especially popular in the United States?
+* Which video categories trended most often?
+* How were they distributed among regions?
+* What categories were especially popular in the United States? Were there any differences between the categories popular in the US and those popular elsewhere?
 
 Project includes PowerPoint presentation and link to the developed dashboard in Tableau.
 
