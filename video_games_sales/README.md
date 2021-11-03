@@ -1,6 +1,6 @@
 # Data Analyst Portfolio
 
-## Video Games Sales Data Analysis
+## Video Games Market Analysis
 
 I work for the online store Ice, which sells video games all over the world. 
 User and expert reviews, genres, platforms (e.g. Xbox or PlayStation), 

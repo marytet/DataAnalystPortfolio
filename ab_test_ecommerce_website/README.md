@@ -1,6 +1,6 @@
 # Data Analyst Portfolio
 
-## A/B Test for an International Online Store
+## A/B Test E-commerce website
 
 I get an analytical task from the international online store to finish the A/B testing based on data received from our predecessors: they launched an A/B test and then quit.
 

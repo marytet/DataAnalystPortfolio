@@ -1,4 +1,5 @@
-Instructions on using the files contained in the zip-file
+
+Instructions on using the files contained in the repository
 
 1. Trending-videos history on YouTube Presentation
 	PowerPoint presentation on the project. 

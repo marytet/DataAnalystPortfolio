@@ -4,7 +4,7 @@ Here is my portfolio from Yandex 100 Practicum
 
 ## Project 1. Customer Churn Prediction and Retention Strategy
 
-LINK (project presentation): [project](customer_churn_prediction_and_retention)
+LINK: [project](customer_churn_prediction_and_retention)
 
 ### The goal of the project:
 Based on analytic data on customers profiles and interactions collected by 
@@ -19,9 +19,9 @@ confusion matrix, users clusters, train model to predict user churn.
 ### Technologies and libraries:
 Python, Pandas, Numpy, Sklearn, Scipy, Plotly, Matplotlib, Seaborn.
 
-## Project 2. Video Games Sales Data Analysis
+## Project 2. Video Games Market Analysis
 
-LINK (project presentation): [project](video_games_sales)
+LINK: [project](video_games_sales)
 
 ### The goal of the project:
 Based on the data about users and expert reviews, genres, platforms, 
@@ -29,30 +29,52 @@ and historical data on game sales, identify patterns that determine
 whether the game is successful or not to plan the advertising campaigns 
 for online store.
 ### Skills:
-Data cleaning, data analysis, descriptive statistics, central limit theorem,
-hypothesis testing, data visualization.
+Data cleaning, data mining, market analysis, user profile, testing hypothesis.
 ### Technologies and libraries:
 Python, Pandas, Numpy, Scipy Stats, Seaborn, Plotly.
 
-## Project 1. Car sales analysis
+## Project 3. A/B testing e-commerce website
 
-In this project we analyze car sales on the site
+LINK: [project](ab_test_ecommerce_website)
 
-LINK: [project](car_sales)
-
-## Project 2. A/B testing international online store
-
-LINK: [project](ab_test_e-commerce_website)
-
-## Project 3. A/B Test to Inform Business Decisions
-
-LINK: [project](ab_test_prioritize_hypotheses)
+### The goal of the project:
+The main goal of the project is to perform and study the results of A/B 
+tests on the statistical significant difference in conversion rate 
+between the control groups based on the data collected by international 
+online store. We will also test the difference in proportions of the number of users at each stage of the event funnel between tested groups and estimate the average order size.
+### Skills:
+Data cleaning, data analysis, user behaviour, event funnel, cumulative metrics, conversion rate,
+hypothesis testing, data visualization.
+### Technologies and libraries:
+Python, Pandas, Numpy, Scipy Stats, Seaborn, Plotly, Math and Functools.
 
 ## Project 4. Business metrics of Yandex.Afisha
 
 LINK: [project](business_metrics_ecommerce_website)
 
+### The goal of the project:
+The goal of the project is to prepare a product, users and marketing expenses analysis of Yandex.Afisha in order to propose a strategy for optimizing marketing expenses.
+### Skills:
+Data cleaning, product analysis, user behaviour, conversion rate, user cohorts, user's lifetime, business metrics, marketing investments,
+hypothesis testing, data visualization.
+### Technologies and libraries:
+Python, Pandas, Numpy, Seaborn, Plotly, Matplotlib.
 
-## Project 7. A/A/B Test to Inform Business Decisions
+## Project 5. Trending video analysis on YouTube
 
-LINK: [project](aab_test_business_decisions)
+LINK: [project](trending_video_analysis)
+
+### Project description
+As a video ad analyst at the Sterling & Draper advertising agency I devote a lot of time to analyzing trending videos on YouTube to determine what content deserves marketing attention.
+Each video has a specific category (Entertainment, Music, News & Politics, etc.), region, and trending date.
+A video can be in the trending section for several days in a row.
+
+The goal of the project is to develop a dashboard to automatically answer to the next questions:
+* What video categories were trending last week?
+* How were they distributed among various regions?
+* What categories were especially popular in the United States?
+
+Project includes PowerPoint presentation and link to the developed dashboard in Tableau.
+
+### Technologies: 
+PowerPoint, Tableau
