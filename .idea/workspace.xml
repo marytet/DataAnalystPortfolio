@@ -7,8 +7,8 @@
     <list default="true" id="c1950354-c263-4672-926c-87f93458a8bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video_games_sales/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/video_games_sales/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_games_sales/graphs/hyp_genres.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_games_sales/graphs/newplot (7).png" beforeDir="false" afterPath="$PROJECT_DIR$/video_games_sales/graphs/sales_by_platforms_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video_games_sales/graphs/newplot (5).png" beforeDir="false" afterPath="$PROJECT_DIR$/video_games_sales/graphs/market_shares_genres.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video_games_sales/graphs/newplot (6).png" beforeDir="false" afterPath="$PROJECT_DIR$/video_games_sales/graphs/market_shares_platforms.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +19,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zmdNw2RuOIOSL9vzjuYpE8EyLE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -57,7 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1634757164174</updated>
       <workItem from="1634757167283" duration="34030000" />
-      <workItem from="1635797238700" duration="19637000" />
+      <workItem from="1635797238700" duration="19956000" />
+      <workItem from="1636317177666" duration="1493000" />
     </task>
     <servers />
   </component>
@@ -74,5 +79,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
