@@ -1,6 +1,8 @@
 # Data Analyst Portfolio
 
-Here is my portfolio from Yandex 100 Practicum
+Hi everyone! 
+
+My name is Maryna, and here is my repository that I have created to share my skills in Data Analysis field.
 
 ## Project 1. Customer Churn Prediction and Retention Strategy
 
