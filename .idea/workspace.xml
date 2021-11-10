@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1950354-c263-4672-926c-87f93458a8bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/business_metrics_ecommerce_website/graphs/num_orders_sources.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business_metrics_ecommerce_website/graphs/session_duration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/business_metrics_ecommerce_website/graphs/user_conv_source.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business_metrics_ecommerce_website/yandex_afisha.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/business_metrics_ecommerce_website/yandex_afisha.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business_metrics_ecommerce_website/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/business_metrics_ecommerce_website/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
       <workItem from="1634757167283" duration="34030000" />
       <workItem from="1635797238700" duration="19956000" />
       <workItem from="1636317177666" duration="2441000" />
-      <workItem from="1636487600514" duration="1152000" />
+      <workItem from="1636487600514" duration="3140000" />
     </task>
     <servers />
   </component>
