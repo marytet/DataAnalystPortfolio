@@ -44,4 +44,6 @@ Before October 2017 the number of sessions per day were less than the average
 number of users how log on to the Yandex.Afisha (the same tendency we can see 
 on April/May 2018).
 
+![img](graphs/num_orders_sources.png)
+
 
