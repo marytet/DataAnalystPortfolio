@@ -87,7 +87,7 @@ PowerPoint, Tableau
 
 ## Project 6. Loan analysis
 
-LINK: [project](original_loan_analysis)
+LINK: [project](original_loan_analysis_fionic)
 
 ### Project description:
 The project I get as a home assignment from the company for 4-days term.
