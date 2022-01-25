@@ -84,3 +84,19 @@ Project includes PowerPoint presentation and link to the developed dashboard in 
 
 ### Technologies: 
 PowerPoint, Tableau
+
+## Project 6. Loan analysis
+
+LINK: [project](original_loan_analysis)
+
+### Project description:
+The project I get as a home assignment from the company for 4-days term.
+Based on analytic data on loan status snapshot DB, analyze loan performance over the time and answer the following questions:¶
+* What attribute provides the best predictor of late borrowers?
+* Identify additional parameters for determining trends in default rates over time.
+* How has loan size changed over the years? What impact did it have on loan performance?
+* Can you find and explain seasonality in loan performance over the course of a year?
+* You can request an additional data point. Which attribute will you ask for in order to accurately predict the default rate?
+
+### Technologies and libraries:
+Python, Pandas, Numpy, Plotly, Seaborn
