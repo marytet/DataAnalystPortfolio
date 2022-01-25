@@ -4,7 +4,7 @@ Hi everyone! Nice to meet you here :)
 
 My name is Maryna, and here is my repository that I have created to share my skills in Data Analysis field. My portfolio in the updating process, I am adding and improving my oldest projects and working on my latest ones.
 
-If you have any questions, you can cantact me via [LinkedIn](https.linkedin.com/in/marina-tetelbaum-pekh) and I will answer each of them.
+If you have any questions, you can cantact me via [LinkedIn](https://www.linkedin.com/in/marina-tetelbaum-pekh/) and I will answer each of them.
 
 Enjoy!
 
