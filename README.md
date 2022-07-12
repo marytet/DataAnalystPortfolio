@@ -100,3 +100,13 @@ Based on analytic data on loan status snapshot DB, analyze loan performance over
 
 ### Technologies and libraries:
 Python, Pandas, Numpy, Plotly, Seaborn
+
+## Project 7. Analyse factors impacting on rides for a new ride-sharing company
+
+LINK:
+
+### Project description:
+The goal of the project to analyze passenger preferences and the impact of external factors on rides, search for patterns on influence of factors on the frequency of rides and test a hypothesis about the impact of weather on ride frequency.
+
+### Technologies and libraries:
+SQL, Python, requests, Beautiful Soup, io, Google Sheets, visualization tools, scipy, numpy
