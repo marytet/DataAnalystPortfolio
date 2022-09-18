@@ -1,0 +1,236 @@
+// leave at least 2 line with only a star on it below, or doc generation fails
+/**
+ *
+ *
+ * Placeholder for custom user javascript
+ * mainly to be overridden in profile/static/custom/custom.js
+ * This will always be an empty file in IPython
+ *
+ * User could add any javascript in the `profile/static/custom/custom.js` file.
+ * It will be executed by the ipython notebook at load time.
+ *
+ * Same thing with `profile/static/custom/custom.css` to inject custom css into the notebook.
+ *
+ *
+ * The object available at load time depend on the version of IPython in use.
+ * there is no guaranties of API stability.
+ *
+ * The example below explain the principle, and might not be valid.
+ *
+ * Instances are created after the loading of this file and might need to be accessed using events:
+ *     define([
+ *        'base/js/namespace',
+ *        'base/js/promises'
+ *     ], function(IPython, promises) {
+ *         promises.app_initialized.then(function (appName) {
+ *             if (appName !== 'NotebookApp') return;
+ *             IPython.keyboard_manager....
+ *         });
+ *     });
+ *
+ * __Example 1:__
+ *
+ * Create a custom button in toolbar that execute `%qtconsole` in kernel
+ * and hence open a qtconsole attached to the same kernel as the current notebook
+ *
+ *    define([
+ *        'base/js/namespace',
+ *        'base/js/promises'
+ *    ], function(IPython, promises) {
+ *        promises.app_initialized.then(function (appName) {
+ *            if (appName !== 'NotebookApp') return;
+ *            IPython.toolbar.add_buttons_group([
+ *                {
+ *                    'label'   : 'run qtconsole',
+ *                    'icon'    : 'icon-terminal', // select your icon from http://fortawesome.github.io/Font-Awesome/icons
+ *                    'callback': function () {
+ *                        IPython.notebook.kernel.execute('%qtconsole')
+ *                    }
+ *                }
+ *                // add more button here if needed.
+ *                ]);
+ *        });
+ *    });
+ *
+ * __Example 2:__
+ *
+ * At the completion of the dashboard loading, load an unofficial javascript extension
+ * that is installed in profile/static/custom/
+ *
+ *    define([
+ *        'base/js/events'
+ *    ], function(events) {
+ *        events.on('app_initialized.DashboardApp', function(){
+ *            requirejs(['custom/unofficial_extension.js'])
+ *        });
+ *    });
+ *
+ *
+ *
+ * @module IPython
+ * @namespace IPython
+ * @class customjs
+ * @static
+ */
+define([
+    'base/js/namespace',
+    'base/js/events'
+], function(
+    Jupyter,
+    events
+) {
+    function actionListener({data: eventString}) {
+        let event = '';
+
+        try {
+            event = JSON.parse(eventString);
+        } catch(e) {
+            return;
+        }
+
+        switch (event.type) {
+            case 'save-notebook':
+                Jupyter.actions.call('jupyter-notebook:save-notebook');
+
+                break;
+            case 'select-cell':
+                // selectCell(event.data);
+
+                break;
+            case 'set-content':
+                setContent(event.data);
+
+                break;
+            default:
+                break;
+        }
+    }
+
+    function getCellTaskId(cell) {
+        const notebook = Jupyter.notebook;
+
+        while (cell) {
+            const tags = cell.metadata.tags;
+            const taskId = tags && tags[0];
+
+            if (taskId) {
+                return taskId;
+            }
+
+            cell = notebook.get_prev_cell(cell);
+        }
+
+        return null;
+    }
+
+    function dispatchEvent(event) {
+         return window.parent.postMessage(
+             typeof event === 'string'
+                 ? event
+                 : JSON.stringify(event),
+             '*'
+         );
+    }
+
+    function actionDispatcher(event) {
+        switch (event.type) {
+            case 'select':
+                // const selectedCell = Jupyter.notebook.get_selected_cell();
+                //
+                // dispatchEvent({
+                //     type: event.type,
+                //     data: {taskId: getCellTaskId(selectedCell)}
+                // });
+
+                return;
+            case 'notebook_saved':
+            default:
+                dispatchEvent({type: event.type});
+        }
+    }
+
+
+    function selectCell({taskId}) {
+        const notebook = Jupyter.notebook;
+        const selectedCell = notebook.get_selected_cell();
+
+        if (!taskId) {
+            selectedCell.unselect();
+
+            return;
+        }
+
+        if (selectedCell && selectedCell.selected && getCellTaskId(selectedCell) === taskId) {
+            return;
+        }
+
+        const index = notebook.get_cells()
+            .findIndex(cell => getCellTaskId(cell) === taskId);
+
+
+        if (index < 0) {
+            return;
+        }
+
+        notebook.select(index);
+
+        const cell = notebook.get_cell(index);
+
+        cell.element[0].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    function setContent(content) {
+        if (typeof content === 'string') {
+            content = JSON.parse(content);
+        }
+
+        content.cells = content.cells.map(cell => ({
+            ...cell,
+            source: typeof cell.source === 'string' ? cell.source : cell.source.join('')
+        }));
+
+        Jupyter.notebook.fromJSON({
+            content,
+            name: Jupyter.notebook.notebook_name,
+            path: Jupyter.notebook.notebook_path
+        });
+    }
+
+    function removeUnnecessaryNodes() {
+        const header = Jupyter.page.header_div_element[0];
+        const headerContainer = header.childNodes[1];
+        const loginWidget = headerContainer.querySelector('#login_widget');
+        const controlPanelBtn = headerContainer.querySelector('#login_widget ~ span');
+        const notebookName = headerContainer.querySelector('#notebook_name');
+
+        headerContainer.removeChild(loginWidget);
+        headerContainer.removeChild(controlPanelBtn);
+        notebookName.parentNode.removeChild(notebookName);
+    }
+
+    // показывать футер в jupiter-домашке при скролле вверх и когда доскроллили до конца содержимого тетради
+    let prevScrollTop = 0;
+
+    function handleNotebookScroll(e) {
+        const {scrollTop, scrollHeight, offsetHeight } = e.target;
+        const direction = (scrollTop - prevScrollTop > 0) ? 'down' : 'up';
+
+        prevScrollTop = scrollTop;
+
+        dispatchEvent({type: 'scroll', data: {direction, scrollTop, offsetHeight, scrollHeight}});
+    }
+
+    removeUnnecessaryNodes();
+
+    events.on('notebook_saved.Notebook', actionDispatcher);
+    events.on('select.Cell', actionDispatcher);
+    dispatchEvent({type: 'app_initialized'});
+
+    const jupyterContentElement = Jupyter.page.site_div_element[0];
+
+    jupyterContentElement.addEventListener('scroll', _.throttle(handleNotebookScroll, 100));
+    window.addEventListener('message', actionListener);
+});

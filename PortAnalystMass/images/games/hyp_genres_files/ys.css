@@ -1,0 +1,89 @@
+@font-face
+{
+    font-family: 'YS Text';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSText-Light-Web.woff2') format('woff2'), url('YSText-Light-Web.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Text';
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSText-Regular-Web.woff2') format('woff2'), url('YSText-Regular-Web.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Text';
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+
+    src: url('YSText-RegularItalic-Web.woff2') format('woff2'), url('YSText-RegularItalic-Web.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Text';
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSText-Bold-Web.woff2') format('woff2'), url('YSText-Bold-Web.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Text';
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSText-Medium-Web.woff2') format('woff2'), url('YSText-Medium-Web.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Display';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSDisplay-Light.woff2') format('woff2'), url('YSDisplay-Light.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Display';
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSDisplay-Regular.woff2') format('woff2'), url('YSDisplay-Regular.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Display';
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSDisplay-Bold.woff2') format('woff2'), url('YSDisplay-Bold.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'YS Display';
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+
+    src: url('YSDisplay-Medium.woff2') format('woff2'), url('YSDisplay-Medium.woff') format('woff');
+}
