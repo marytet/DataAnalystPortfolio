@@ -90,21 +90,20 @@ On this step of project I developed users' profiles for three sales regions:
 * Europe;
 * Japan.
 * 
-The graphs below demonstrate the market share for the most popular platforms and genres for investigated regions.
+The graph below demonstrate the market share for the most popular platforms and genres for investigated regions.
 
 ![img](graphs/market_shares_platforms.png)
 
 
 On the histogram above we can see the market share of the 5 most popular 
-platforms in each region. We can see the signature difference between 
-the preferences of users from North America, Europe, and especially from 
+platforms for each region. We can see the signature difference between preferences of users from North America, Europe, and especially from 
 Japan. In Japan is not enter into the 5 best-selling platforms the most 
 popular platform that is using by the consumers in NA and Europe,
 and also we see 2 platforms that are not popularly in NA and in Europe: 
 PSP and PSV. And we have 3 platforms that are popular in the all-region: 
 PS3, PS4, and 3DS. The XOne is in the top 5 only in NA and PC is only in 
 Europe.
- I think these differences are due to the differences in cultural 
+ I believe these differences are due to differences in cultural 
 characteristics and possibly the policy of state itself in relation to the
 gaming business (for example the platforms PSP and PSV are platforms developed in Japan).
 
