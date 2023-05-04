@@ -1,10 +1,12 @@
 # Data Analyst Portfolio
 
-Hi everyone! Nice to meet you here :)
+Hello and welcome to my data analysis portfolio! My name is Maryna, and I'm a junior data analyst with a passion for exploring and interpreting data to uncover insights and make informed decisions.
 
-My name is Maryna, and this is my repository that I have created to share my skills in Data Analysis field. My portfolio in the updating process, I am adding and improving my oldest projects and working on my latest ones.
+This repository is where I showcase my data analysis skills through a range of projects that I've worked on. From cleaning and wrangling data to visualizing trends and patterns, I'm constantly improving my skills and learning new techniques to stay ahead of the curve.
 
-If you have any questions, you can contact me via [LinkedIn](https://www.linkedin.com/in/marina-tetelbaum-pekh/) and I will answer each of them.
+As you browse my portfolio, you'll find examples of my work that demonstrate my proficiency in programming languages such as Python and R, as well as tools like SQL and Tableau. Whether you're interested in exploring customer behavior, predicting sales trends, or analyzing marketing campaigns, I'm confident that my skills can help you achieve your goals.
+
+So please take a look around and feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/marina-tetelbaum-pekh/) if you have any questions or would like to discuss a potential project. I look forward to hearing from you!
 
 Enjoy!
 
@@ -13,11 +15,10 @@ Enjoy!
 LINK: [project](customer_churn_prediction_and_retention)
 
 ### The goal of the project:
-Based on analytic data on customers profiles and interactions collected by 
-the gym chain Model Fitness, to analyze customer profiles and, on their basis,
-think over a customer retention strategy. Additional tasks of this project 
-are drawing up a typical user profile, analyzing the factors affecting churn,
-and making recommendations for customer service.
+Using customer profiles and interactions data from the gym chain Model Fitness, I developed a customer retention strategy based on data analysis techniques. 
+The project involved data cleaning, exploratory data analysis, and predictive modeling. 
+Key insights included identifying significant factors contributing to churn and developing targeted marketing campaigns and personalized customer service. 
+The project showcases my skills in data analysis and predictive modeling, as well as my ability to provide actionable recommendations for businesses.
 ### Skills:
 Data cleaning, detecting data anomalies, data visualization, descriptive analytics, 
 correlation matrix, logistic regression, random forest, model's metrics, 

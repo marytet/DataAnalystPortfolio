@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1950354-c263-4672-926c-87f93458a8bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PortAnalystMass/images/taxi1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PortAnalystMass/images/taxi2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PortAnalystMass/images/taxi3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PortAnalystMass/images/taxi4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PortAnalystMass/images/taxi5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PortAnalystMass/images/taxi6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PortAnalystMass/business_metrics.html" beforeDir="false" afterPath="$PROJECT_DIR$/PortAnalystMass/business_metrics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PortAnalystMass/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PortAnalystMass/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ride_company_sql/.ipynb_checkpoints/taxi_rides_sql-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ride_company_sql/.ipynb_checkpoints/taxi_rides_sql-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ride_company_sql/taxi_rides_sql.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ride_company_sql/taxi_rides_sql.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_churn_prediction_and_retention/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/customer_churn_prediction_and_retention/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -2,24 +2,35 @@
 
 ## Customer churn prediction and retention strategy
 
-Based on analytic data on customers profiles and interactions collected by 
-the gym chain Model Fitness, to analyze customer profiles and, 
-on their basis, develop a customer retention strategy. Additional tasks of this project are drawing up a typical user profile, analyzing the factors affecting churn, and making recommendations for customer service.
+In this project, I analyzed customer profiles and interactions data collected by the gym chain Model Fitness to develop a customer retention strategy. Using data analytics techniques, I identified typical user profiles and analyzed the factors that contribute to customer churn. Based on my findings, I made recommendations for improving customer service and retention.
 
+The project involved several key steps, including data cleaning and wrangling, exploratory data analysis, and predictive modeling. I used Python to perform the analysis and visualization.
+
+Some of the key insights I gained from the project include identifying the most significant factors that contribute to customer churn, such as age, frequency of visits, and length of membership. Using this information, I developed a customer retention strategy that involved targeted marketing campaigns and personalized customer service.
+
+Overall, this project showcases my skills in data cleaning, data analysis, and predictive modeling, as well as my ability to translate data insights into actionable recommendations for businesses.
 ### 1. Exploratory data analysis
 
 #### Clean data and drawing first conclusions. Data divided into two groups: churn and stay, and plotted feature distributions.
 <br/>
 
 ![img](graphs/churn_distribution.png)
-According to the graphs above we can draw some interesting conclusions:
+According to the graphs above, we can draw some interesting conclusions:<br/>
 
-- Age distribution: the peak of churn customers 25-27 years, the peak of staying customers 30-32 years.<br/>
-- Month to end contract distribution: peak of churn 6 months, the peak of stay customers 1-2 months.<br/>
-- Lifetime distribution: we can see a significant peak in the churn of visitors at 0 and 1 lifetime.<br/>
-- Average frequency total distribution: there is no pronounced peak in the number of remaining users, the indicator varies from 1 to 3 visits per week, there is also a large number of users visiting th gym 4 times a week, while the churn peak occurs at 1 to 2 visits per week.<br/>
-- More people without partners churned than people with partners. Same for people with group visits.<br/>
-- The highest churn is accounted for users with contract period of one month and very low churn rate for users with contract of 12 months.<br/>
+- From the age distribution graph, we can see that the peak of churn customers is 25-27 years old, while the peak of staying customers is 30-32 years old. This suggests that Model Fitness needs to focus on retaining younger customers.
+<br/>
+- The month to end contract distribution shows that the peak of churn is at 6 months, while the peak of stay customers is at 1-2 months. Therefore, we recommend that Model Fitness should offer attractive loyalty programs to customers who are approaching the end of their 6-month contract to encourage them to renew.
+<br/>
+- The lifetime distribution graph indicates a significant peak in churn of visitors at 0 and 1 lifetime. This suggests that Model Fitness needs to improve their onboarding process for new customers to ensure they are engaged and committed to using the gym.
+<br/>
+- The average frequency total distribution graph shows that there is no pronounced peak in the number of remaining users, and the indicator varies from 1 to 3 visits per week. There is also a large number of users visiting the gym 4 times a week. The churn peak occurs at 1 to 2 visits per week. Therefore, Model Fitness should focus on encouraging customers to increase their gym visits, offering incentives for more frequent attendance.
+<br/>
+- Furthermore, we found that more people without partners churned than people with partners, and the same for people with group visits. This suggests that Model Fitness should consider introducing social events and activities to help single customers connect with others in the gym community and build relationships.
+<br/>
+- Finally, we discovered that the highest churn is accounted for users with a contract period of one month, while there is a very low churn rate for users with a contract of 12 months. Therefore, Model Fitness should consider offering attractive discounts and incentives for longer contract periods to encourage customers to commit to a longer-term membership.
+<br/>
+Overall, based on these findings, we recommend that Model Fitness should focus on improving customer engagement, building relationships within the gym community, and offering attractive loyalty programs to improve customer retention rates.
+Overall, these insights highlight the importance of understanding customer behavior and preferences in order to develop effective retention strategies. By analyzing the data and drawing these conclusions, we can make more informed decisions about how to improve customer service and reduce churn rates.
 
 #### Correlation matrix
 <br/>
@@ -27,48 +38,39 @@ According to the graphs above we can draw some interesting conclusions:
 ![img](graphs/gym_corr.png)
 <br/>
 
-The correlation matrix above shows a strong dependency between two features: Average class frequency total and Average class frequency current month, the features have a correlation of about 0.95 which indicates presence of multicollinearity between the two variables. We can drop Average class frequency current month.
+The correlation matrix indicates a strong correlation between the Average class frequency total and Average class frequency current month features, with a correlation coefficient of around 0.95. This suggests the presence of multicollinearity between these two variables. To avoid issues with multicollinearity, it may be best to remove one of these variables from the analysis.
 <br/>
 ### 2. Choosing model<br/>
 
-The main task of this step of our project is to build an optimal model 
-to predict user churn. I will train the model on the train set with 
-two methods: logistic regression and random forest. Lastly, I'll evaluate 
-accuracy, precision, and recall for both models using the validation data. 
-Based on the calculated metrics and on the plotted confusion matrices for 
-each of the models, I'll choose tho most accurate model.
-<br/>
-After predicting models I built Receiver Operating Characteristic Curve for two candidate models, to compare their performances. AUC, as the name suggests, is the covered area under the respective curve, higher values indicating a better model that is able to distinguish between the two classes.
-<br/>
+In the second step of our project, we aimed to build an optimal model to predict user churn. We trained two models, logistic regression and random forest, on the training set and evaluated their accuracy, precision, and recall using the validation data. After analyzing the calculated metrics and the plotted confusion matrices, we chose the most accurate model.
 
 ![img](graphs/roc_curve.png)
 
 <br/>
-Our two models perform particularly well, at 0.95 and 0.94. Model Logistic regression is obviously better than model Random Forrest. We can see that visually: at given threshold, model Logistic Regression presents better metrics than model Random Forrest and thus its curve is higher.
+We built Receiver Operating Characteristic (ROC) curves for both models and calculated their Area Under the Curve (AUC) to compare their performances. Our logistic regression and random forest models both performed well, with AUC values of 0.95 and 0.94, respectively. However, the logistic regression model had a higher ROC curve, indicating better performance at the given threshold.<br/>
 <br/>
+
 #### Conclusion
 <br/>
 To choose the better model we'll look at the calculated metrics for  both models.
 
-- Accuracy: same value for Logistic Regression and Random Forrest.<br/>
-- Precision: 0.78 for Logistic Regression and 0.8 for Random Forrest. It means Random Forrest model is more accurate in identifying positive samples as positive and not negative.<br/>
-- Recall: 0.77 for Logistic Regression and 0.76 for Random Forrest. We can trust more the Logistic Regression in detecting all positive samples.<br/>
-- F1 or harmonic mean of the precision and recall: 0.77 for Logistic Regression and 0.78 for Randon Forrest.<br/>
-- ROC AUC: Logistic Regression evaluates best result 0.95, then Random Forrest(0.94).<br/>
+- Accuracy. When comparing the calculated metrics for both models, we found that accuracy was the same for both models.<br/>
+- Precision. Random forest had a slightly higher precision of 0.8 compared to 0.78 for logistic regression, indicating that the random forest model was more accurate in identifying positive samples as positive and not negative.<br/>
+- Recall. However, logistic regression had a slightly higher recall of 0.77 compared to 0.76 for random forest, indicating that logistic regression was better at detecting all positive samples.<br/>
+- F1 or harmonic mean of the precision and recall. The F1 score was 0.77 for logistic regression and 0.78 for random forest.<br/>
+- ROC AUC. Logistic Regression evaluates best result 0.95, then Random Forrest(0.94).<br/>
 
-There are good results, but since our logistic regression and random forest model performed more or less the same, It's a good idea to go with the simpler and more interpretable model that is logistic regression model.
-<br/>
+Overall, while both models performed similarly, we chose the logistic regression model as it is simpler and more interpretable.<br/>
+
 ### 3. Create user clusters
 <br/>
-I use Hierarchical clustering to get the optimal number of clusters to 
-predict user churn.
+In this step, I used Hierarchical clustering to determine the optimal number of clusters for predicting user churn.
 <br/>
 
 ![img](graphs/gym_clusters.png)
 
 <br/>
-The suggested optimal number of clusters corresponds to the five different 
-colors on the plot.
+The suggested optimal number of clusters corresponds to the five different colors on the Hierarchical clustering chart.
 <br/>
 
 #### Predict customer clusters and feature distribution
@@ -81,10 +83,10 @@ colors on the plot.
 Graphs above show the cluster distribution for each relevant continuous feature with clusters segregation.
 Let's take a closer look at each graph.
 
-- Cluster distribution by Age: on clusters 0, 2 and 3 the peak is on the range 28-30 years, for cluster 1 we see offset to the left side and for cluster 4 - to the right side.<br/>
-- Cluster distribution by Average additional charges total: clusters 0,1,2,3 are in the range 50-150 units, on this graph we can highlight cluster 4 with two peaks in the distribution: on the range 50-100 and 150-220. It means in cluster 4 we have clients who prefer to get additional services in the gym.<br/>
-- Cluster distribution by Lifetime: the peak of each cluster on the 2 lifetime, only cluster 4 is on the 3-4 lifetime.<br/>
-- Cluster distribution by Average class frequency total: visit frequency for clusters 0 and 3 is 1-2 times a week, for clusters 0 and 2 frequency 2 times a week, and for cluster 4 the frequency between 2 and 3 times a week.<br/>
+- Cluster distribution by Age: We can see that clusters 0, 2, and 3 have a peak in the age range of 28-30 years, while for cluster 1, we see an offset to the left side and for cluster 4, an offset to the right side.<br/>
+- Cluster distribution by Average additional charges total: Clusters 0, 1, 2, and 3 fall in the range of 50-150 units. However, cluster 4 has two peaks in the distribution, which are in the ranges of 50-100 and 150-220 units. This indicates that customers in cluster 4 prefer to get additional services in the gym.<br/>
+- Cluster distribution by Lifetime: The peak of each cluster is around 2 lifetimes, except for cluster 4, which has a peak around 3-4 lifetimes.<br/>
+- Cluster distribution by Average class frequency total: The visit frequency for clusters 0 and 3 is 1-2 times a week, for clusters 0 and 2, the frequency is 2 times a week, and for cluster 4, the frequency is between 2 and 3 times a week.<br/>
 
 <table>
     <caption>Churn rate for each cluster:</caption>
@@ -114,8 +116,7 @@ Let's take a closer look at each graph.
     </tr>
 </table>
 
-The table above shows the churn rate for each cluster. We see the lowest 
-churn rates among customers who are in clusters 4 and 2.
+Furthermore, the table above shows the churn rate for each cluster, where we can observe that customers in clusters 4 and 2 have the lowest churn rates, which is only 0.020 and 0.247 respectively. This information can be useful in creating retention strategies for these two clusters to maintain their loyalty to the gym.
 
 
 To measure model performance I'll use Cumulative gains chart.
@@ -124,11 +125,9 @@ To measure model performance I'll use Cumulative gains chart.
 
 Based on the graph above we can conclude, the curve for the developed Logistic regression model suggests a better performance than for the random model. According to the Cumulative Gaines Curve, if we approach 20% of our customer base (x-axis), we will get about 75% of all the positive answers (y-axis). With the top 30% of our customer base we can find a whooping percentage of 90% of all positive answers and so on so forth.
 
-### Main conclusion
-
-Based on the research, I have developed some suggestions and recommendations.
-
-- First of all, I want to note the large churn of clients with contracts 
+  <h2>Conclusions and Recommendations</h2>
+  <p>Based on the research, we have developed the following suggestions and recommendations:</p>
+  - First of all, I want to note the large churn of clients with contracts 
 for one month and who leave the gym and no longer return after a few sessions.  
 There is a need to create an interest in continuing to use the gym services
 and motivational policies in order for them to renew their contracts. For this purpose, I propose to create user cards with the possibility 
@@ -149,4 +148,21 @@ who temporarily can not to visit the gym, but which are planning to return
 in the feature. In this way we will become more customer-oriented, 
 and it will give us an advantage over other gyms.
 
-
+  <h3>User Retention Strategies:</h3>
+  <ul>
+    <li>Create user cards with the possibility of accumulating points and subsequently exchanging these points for rewards</li>
+    <li>Offer promotions and discounts for those who renew their contracts</li>
+    <li>Create a feedback system for improving gym services and eliminating deficiencies</li>
+    <li>Implement a membership freeze option to retain customers who temporarily can not visit the gym</li>
+  </ul>
+  
+  <h3>Model Recommendation:</h3>
+  <p>Based on the evaluation metrics, we recommend using the logistic regression model for predicting user churn.</p>
+  
+  <h3>Future Research:</h3>
+  <p>Further research could be done on:</p>
+  <ul>
+    <li>Correlating user demographic data with churn rate to identify specific demographic groups that are more likely to churn</li>
+    <li>Conducting A/B testing on the user retention strategies to measure their effectiveness</li>
+    <li>Exploring the impact of external factors (e.g. economic downturns) on user churn</li>
+  </ul>
