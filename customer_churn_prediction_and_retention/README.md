@@ -15,7 +15,7 @@ Overall, this project showcases my skills in data cleaning, data analysis, and p
 <br/>
 
 ![img](graphs/churn_distribution.png)
-According to the graphs above, we can draw some interesting conclusions:<br/>
+According to the graphs above, we can draw some interesting conclusions:
 
 - From the age distribution graph, we can see that the peak of churn customers is 25-27 years old, while the peak of staying customers is 30-32 years old. This suggests that Model Fitness needs to focus on retaining younger customers.
 <br/>
