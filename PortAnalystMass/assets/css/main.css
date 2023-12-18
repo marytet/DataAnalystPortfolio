@@ -2600,6 +2600,8 @@ input, select, textarea {
 
 		.image.left, .image.right {
 			max-width: 40%;
+			height: 200px; /* Set the desired fixed height */
+    		object-fit: cover; /* Crop images to fit the container */
 		}
 
 			.image.left img, .image.right img {
