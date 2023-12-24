@@ -1,0 +1,85 @@
+// Based on sources of: 
+//  Copyright (C) 2014  Jean-Christophe Jaskula
+//                2015  joshuacookebarnes@gmail.com
+//
+//  Distributed under the terms of the BSD License.
+// ---------------------------------------------------------------------------
+//
+
+
+define([
+    'require',
+    'jquery',
+    'moment',
+    'base/js/namespace',
+    'base/js/events',
+    'notebook/js/codecell'
+], function (
+    requirejs,
+    $,
+    moment,
+    Jupyter,
+    events,
+    codecell
+) {
+    'use strict';
+
+    var mod_name = 'ExecuteTimeLog';
+    var log_prefix = '[' + mod_name + ']';
+
+    var CodeCell = codecell.CodeCell;
+
+    function patch_CodeCell_get_callbacks () {
+        console.log(log_prefix, 'patching CodeCell.prototype.get_callbacks');
+        var old_get_callbacks = CodeCell.prototype.get_callbacks;
+        CodeCell.prototype.get_callbacks = function () {
+            var callbacks = old_get_callbacks.apply(this, arguments);
+
+            var cell = this;
+            var prev_reply_callback = callbacks.shell.reply;
+            callbacks.shell.reply = function (msg) {
+                if (msg.msg_type === 'execute_reply') {
+                    var start_time = moment(msg.metadata.started);
+                    var end_time = moment(msg.header.date);
+                    var duration =  -start_time.diff(end_time);
+                    if (!(mod_name in Jupyter.notebook.metadata)){
+                        Jupyter.notebook.metadata[mod_name] = [];
+                    }
+                    Jupyter.notebook.metadata[mod_name].push({
+                        start_time: start_time,
+                        duration: duration,
+                    })                    
+                }
+                else {
+                    console.log('msg_type', msg.msg_type);
+                }
+                return prev_reply_callback(msg);
+            };
+            return callbacks;
+        };
+    }
+
+    
+    function load_jupyter_extension () {
+
+        
+        Jupyter.notebook.config.loaded.then(function on_config_loaded () {
+            // $.extend(true, options, Jupyter.notebook.config.data[mod_name]);
+        }, function on_config_load_error (reason) {
+            console.warn(log_prefix, 'Using defaults after error loading config:', reason);
+        }).then(function do_stuff_with_config () {
+
+            
+
+            patch_CodeCell_get_callbacks();
+            
+        }).catch(function on_error (reason) {
+            console.error(log_prefix, 'Error:', reason);
+        });
+    }
+
+    return {
+        load_jupyter_extension : load_jupyter_extension,
+        load_ipython_extension : load_jupyter_extension
+    };
+});

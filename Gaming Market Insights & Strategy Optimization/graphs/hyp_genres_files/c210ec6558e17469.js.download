@@ -1,0 +1,3 @@
+if (!window._data) window._data = {};
+        window._data['trainer'] = {"pyodide":{"dataAnalyst":{"preloadLibs":["pandas"]}},"onboardingPresets":{"trainer.type.jupyter_homework.tutorial.shown":[],"trainer.type.react.tutorial.shown":[],"trainer.type.puppeteer.tutorial.shown":[],"trainer.type.python.tutorial.shown":["trainer.python.preset"],"trainer.type.jupyter.tutorial.shown":[],"trainer.type.sql.tutorial.shown":[],"trainer.type.web.tutorial.shown":["trainer_web_get_task","trainer_web_toggle_theory"],"trainer.type.cpp.tutorial.shown":["trainer.cpp.preset"],"trainer.type.nodejs.tutorial.shown":[],"trainer.type.django.tutorial.shown":[]}};
+    
